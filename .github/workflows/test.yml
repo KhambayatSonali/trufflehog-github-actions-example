@@ -33,7 +33,13 @@ jobs:
           base: "main"
           #head: HEAD
           extra_args: --debug
-
+      - name: scan-push
+        uses: trufflesecurity/trufflehog@main
+        continue-on-error: true
+        with:
+          base: "main"
+          #head: ${{ github.ref_name }}
+          extra_args: --results=verified,unknown
       - name: Scan Results Status
         if: steps.trufflehog.outcome == 'failure'
         run: exit 1
