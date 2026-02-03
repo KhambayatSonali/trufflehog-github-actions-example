@@ -30,7 +30,7 @@ jobs:
         continue-on-error: false
         with:
           path: ./
-          base: "main"
+          #base: "main"
           #head: HEAD
           extra_args: --debug
       - name: scan-push
