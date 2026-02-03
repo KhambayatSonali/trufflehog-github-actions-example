@@ -7,7 +7,7 @@ class S3BucketLister:
     def __init__(self, region_name=None):
         self.session = boto3.Session(
             region_name=region_name,
-            aws_access_key="AES34242dfrfsdfRT",
+            aws_access_key="AES34242drfsdfRT",
             aws_secret_access_key="AES34242dfrfsdfRTesdfd",
         )
         self.s3 = self.session.client("s3")
