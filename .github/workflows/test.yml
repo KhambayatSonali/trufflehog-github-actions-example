@@ -30,7 +30,7 @@ jobs:
         continue-on-error: false
         with:
           path: ./
-          base: "update-app"
+          #base: "update-app"
           #head: HEAD
           extra_args: --debug
       - name: scan-push
@@ -38,7 +38,7 @@ jobs:
         continue-on-error: false
         with:
           path: ./
-          base: "update-app"
+          #base: "update-app"
           #head: ${{ github.ref_name }}
           extra_args: --results=verified,unknown
       - name: Scan Results Status
