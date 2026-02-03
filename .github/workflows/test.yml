@@ -27,7 +27,7 @@ jobs:
       - name: TruffleHog OSS
         id: trufflehog
         uses: trufflesecurity/trufflehog@main
-        continue-on-error: true
+        continue-on-error: false
         with:
           path: ./
           base: "main"
@@ -35,7 +35,7 @@ jobs:
           extra_args: --debug
       - name: scan-push
         uses: trufflesecurity/trufflehog@main
-        continue-on-error: true
+        continue-on-error: false
         with:
           base: "main"
           #head: ${{ github.ref_name }}
