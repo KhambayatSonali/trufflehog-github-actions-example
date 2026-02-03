@@ -31,7 +31,7 @@ jobs:
         with:
           path: ./
           base: "main"
-          head: "${{ github.event.repository.default_branch }}"
+          #head: "${{ github.event.repository.default_branch }}"
           extra_args: --debug --only-verified
       - name: scan-push
         uses: trufflesecurity/trufflehog@main
