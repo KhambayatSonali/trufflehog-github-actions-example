@@ -42,5 +42,5 @@ jobs:
           #head: ${{ github.ref_name }}
           extra_args: --results=verified,unknown
       - name: Scan Results Status
-        if: steps.trufflehog.outcome == 'failure'
+        if: steps.trufflehog.outcome == 'success'
         run: exit 1
