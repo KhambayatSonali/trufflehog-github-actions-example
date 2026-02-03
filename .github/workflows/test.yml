@@ -31,7 +31,7 @@ jobs:
         with:
           path: ./
           base: "${{ github.event.repository.default_branch }}"
-          head: HEAD
+          #head: HEAD
           extra_args: --debug
 
       - name: Scan Results Status
